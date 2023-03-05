@@ -169,7 +169,7 @@ for channel in channels:
         text = summarize(messages)
         result_text.append(f"----\n<#{channel['id']}>\n{text}")
 
-title = (f"{yesterday.strftime('%Y-%m-%d')}のpublic channelの要約")
+title = (f"{today.strftime('%Y-%m-%d')}のpublic channelの要約")
 
 response = client.chat_postMessage(
     channel=CHANNEL_ID,
