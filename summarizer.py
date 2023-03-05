@@ -36,10 +36,8 @@ HOURS_BACK = 25
 JST = pytz.timezone('Asia/Tokyo')
 now = datetime.now(JST)
 yesterday = now - timedelta(hours=HOURS_BACK)
-start_time = datetime(yesterday.year, yesterday.month, yesterday.day,
-                      yesterday.hour, yesterday.minute, yesterday.second)
-end_time = datetime(now.year, now.month, now.day,
-                    now.hour, now.minute, now.second)
+start_time = datetime(now.year, now.month, now.day, 0, 0, 0)
+end_time = datetime(now.year, now.month, now.day, 18, 30, 0)
 
 # Slack APIクライアントを初期化する
 client = WebClient(token=TOKEN)
