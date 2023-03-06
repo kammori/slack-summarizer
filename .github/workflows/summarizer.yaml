@@ -3,7 +3,7 @@ name: Summarizer
 on:
   workflow_dispatch:
   schedule:
-    - cron: "45 9 * * *" # 日本時間で毎晩6時45分に実行
+    - cron: "35 9 * * *" # UTCで指定。日本時間で毎晩18:30に実行
 
 jobs:
   summarize:
