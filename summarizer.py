@@ -32,10 +32,10 @@ TOKEN = str(os.environ.get('SLACK_BOT_TOKEN')).strip()
 CHANNEL_ID = str(os.environ.get('SLACK_POST_CHANNEL_ID')).strip()
 
 # 取得する期間を計算する
-HOURS_BACK = 25
+HOURS_BACK = 12
 JST = pytz.timezone('Asia/Tokyo')
 now = datetime.now(JST)
-yesterday = now - timedelta(hours=HOURS_BACK)
+today = now - timedelta(hours=HOURS_BACK)
 start_time = datetime(now.year, now.month, now.day, 0, 0, 0)
 end_time = datetime(now.year, now.month, now.day, 18, 30, 0)
 
